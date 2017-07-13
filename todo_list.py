@@ -16,9 +16,12 @@ def add_to_list(my_list):
 
 def view_list(my_list):
     """Print each item in the list."""
+    
+    for items in my_list:
+        print items
 
-    print my_list
-    # "The view_list function has not yet been written"
+    # print my_list
+    # # "The view_list function has not yet been written"
 
 
 def display_main_menu(my_list):
@@ -32,7 +35,9 @@ def display_main_menu(my_list):
     >>> """
 
     while True:
-        answer = raw_input(user_options)# Collect input and include your if/elif/else statements here.
+        answer = raw_input(user_options)
+        answer = answer.upper()
+        # Collect input and include your if/elif/else statements here.
         if answer == "A":
             add_to_list(my_list)
             # print my_list
@@ -41,9 +46,11 @@ def display_main_menu(my_list):
 
         elif answer == "C":
             break
+        else:
+            print " What?" 
 
 #-------------------------------------------------
 
-my_list = []
-display_main_menu(my_list)
+a_list = []
+display_main_menu(a_list)
 
