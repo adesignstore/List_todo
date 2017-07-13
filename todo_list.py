@@ -22,7 +22,13 @@ def view_list(my_list):
 
     # print my_list
     # # "The view_list function has not yet been written"
-
+def delete_item(my_list):
+    deleted_item = a_list.pop(0)
+    deleted_list.append(deleted_item)
+    for items in a_list:
+        print items
+    for items in deleted_list:
+        print items
 
 def display_main_menu(my_list):
     """Displays main options, takes in user input, and calls view or add function."""
@@ -32,6 +38,7 @@ def display_main_menu(my_list):
     A. Add a new item
     B. View list
     C. Quit the program
+    D. Delete first item from list
     >>> """
 
     while True:
@@ -43,6 +50,8 @@ def display_main_menu(my_list):
             # print my_list
         elif answer == "B":
             view_list(my_list)
+        elif answer == "D":
+            delete_item(my_list)
 
         elif answer == "C":
             break
@@ -52,5 +61,6 @@ def display_main_menu(my_list):
 #-------------------------------------------------
 
 a_list = []
+deleted_list = []
 display_main_menu(a_list)
 
